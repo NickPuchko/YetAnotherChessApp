@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct ChessApp: App {
+	private let appGraph = AppGraph()
     var body: some Scene {
         WindowGroup {
             ContentView()
