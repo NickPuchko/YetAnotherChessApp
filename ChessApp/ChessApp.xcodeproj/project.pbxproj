@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,15 @@
 		AA3FCF0C26ECE171001524EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF0B26ECE171001524EC /* ContentView.swift */; };
 		AA3FCF0E26ECE173001524EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3FCF0D26ECE173001524EC /* Assets.xcassets */; };
 		AA3FCF1126ECE173001524EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3FCF1026ECE173001524EC /* Preview Assets.xcassets */; };
+		AA3FCF1826ED2423001524EC /* AppGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF1726ED2423001524EC /* AppGraph.swift */; };
+		AA3FCF1A26ED25CD001524EC /* RootTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF1926ED25CD001524EC /* RootTab.swift */; };
+		AA3FCF1C26ED2C16001524EC /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF1B26ED2C16001524EC /* Search.swift */; };
+		AA3FCF1E26ED2C5A001524EC /* EventPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF1D26ED2C5A001524EC /* EventPreview.swift */; };
+		AA3FCF2026ED2DD3001524EC /* RatingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF1F26ED2DD3001524EC /* RatingType.swift */; };
+		AA3FCF2226ED2DE5001524EC /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF2126ED2DE5001524EC /* GameMode.swift */; };
+		AA3FCF2526ED2E23001524EC /* EventState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF2426ED2E23001524EC /* EventState.swift */; };
+		AA3FCF2726ED46D9001524EC /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF2626ED46D9001524EC /* SearchBar.swift */; };
+		AA3FCF2926ED5E04001524EC /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF2826ED5E04001524EC /* Filters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +32,15 @@
 		AA3FCF0B26ECE171001524EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA3FCF0D26ECE173001524EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA3FCF1026ECE173001524EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA3FCF1726ED2423001524EC /* AppGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGraph.swift; sourceTree = "<group>"; };
+		AA3FCF1926ED25CD001524EC /* RootTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTab.swift; sourceTree = "<group>"; };
+		AA3FCF1B26ED2C16001524EC /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		AA3FCF1D26ED2C5A001524EC /* EventPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreview.swift; sourceTree = "<group>"; };
+		AA3FCF1F26ED2DD3001524EC /* RatingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingType.swift; sourceTree = "<group>"; };
+		AA3FCF2126ED2DE5001524EC /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		AA3FCF2426ED2E23001524EC /* EventState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventState.swift; sourceTree = "<group>"; };
+		AA3FCF2626ED46D9001524EC /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		AA3FCF2826ED5E04001524EC /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +85,11 @@
 		AA3FCF0826ECE171001524EC /* ChessApp */ = {
 			isa = PBXGroup;
 			children = (
+				AA3FCF2326ED2E0A001524EC /* Search */,
 				AA3FCF0926ECE171001524EC /* ChessApp.swift */,
 				AA3FCF0B26ECE171001524EC /* ContentView.swift */,
+				AA3FCF1726ED2423001524EC /* AppGraph.swift */,
+				AA3FCF1926ED25CD001524EC /* RootTab.swift */,
 				AA3FCF0D26ECE173001524EC /* Assets.xcassets */,
 				AA3FCF0F26ECE173001524EC /* Preview Content */,
 			);
@@ -81,6 +102,20 @@
 				AA3FCF1026ECE173001524EC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AA3FCF2326ED2E0A001524EC /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				AA3FCF1B26ED2C16001524EC /* Search.swift */,
+				AA3FCF2626ED46D9001524EC /* SearchBar.swift */,
+				AA3FCF2826ED5E04001524EC /* Filters.swift */,
+				AA3FCF1D26ED2C5A001524EC /* EventPreview.swift */,
+				AA3FCF1F26ED2DD3001524EC /* RatingType.swift */,
+				AA3FCF2126ED2DE5001524EC /* GameMode.swift */,
+				AA3FCF2426ED2E23001524EC /* EventState.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		FD2D0685CD50BA35541502AE /* Frameworks */ = {
@@ -128,7 +163,7 @@
 				};
 			};
 			buildConfigurationList = AA3FCF0126ECE171001524EC /* Build configuration list for PBXProject "ChessApp" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -187,8 +222,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3FCF2226ED2DE5001524EC /* GameMode.swift in Sources */,
 				AA3FCF0C26ECE171001524EC /* ContentView.swift in Sources */,
+				AA3FCF1E26ED2C5A001524EC /* EventPreview.swift in Sources */,
 				AA3FCF0A26ECE171001524EC /* ChessApp.swift in Sources */,
+				AA3FCF2926ED5E04001524EC /* Filters.swift in Sources */,
+				AA3FCF1C26ED2C16001524EC /* Search.swift in Sources */,
+				AA3FCF2526ED2E23001524EC /* EventState.swift in Sources */,
+				AA3FCF1826ED2423001524EC /* AppGraph.swift in Sources */,
+				AA3FCF2726ED46D9001524EC /* SearchBar.swift in Sources */,
+				AA3FCF1A26ED25CD001524EC /* RootTab.swift in Sources */,
+				AA3FCF2026ED2DD3001524EC /* RatingType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +382,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -369,7 +413,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
