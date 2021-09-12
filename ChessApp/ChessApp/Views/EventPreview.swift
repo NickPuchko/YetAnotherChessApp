@@ -56,6 +56,7 @@ struct EventPreview: View {
 				.fill(.white)
 				.shadow(color: .init(white: 0.8), radius: 5, x: 0, y: 5)
 		)
+		.foregroundColor(.black)
 		.padding()
     }
 }

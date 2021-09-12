@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct ChessApp: App {
-	private let appGraph = AppGraph()
+	@StateObject private var coordinator = RootCoordinator(tab: .search)
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootCoordinatorView(coordinator: coordinator)
         }
     }
 }

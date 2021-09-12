@@ -12,7 +12,7 @@ struct EventState: Identifiable {
 	let id: Int
 	let title: String
 	let location: String
-	let imageData: UIImage?
+	let imageData: UIImage? // TODO: replace with imageURL & AsyncImage
 	let startDate: Date
 	let endDate: Date
 	let ratingType: RatingType
