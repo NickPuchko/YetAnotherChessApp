@@ -16,11 +16,11 @@ struct Filters: View {
 	// @Binding var mode: GameMode
 
     var body: some View {
-		ScrollView {
+		ScrollView(.horizontal, showsIndicators: false) {
 			HStack {
-				DatePicker("Начало", selection: $startDate, in: Date()...)
+				DatePicker("Начало", selection: $startDate, in: Date()..., displayedComponents: .date)
 					.datePickerStyle(CompactDatePickerStyle())
-				DatePicker("Конец", selection: $endDate, in: Date()...)
+				DatePicker("Конец", selection: $endDate, in: Date()..., displayedComponents: .date)
 					.datePickerStyle(CompactDatePickerStyle())
 				Spacer()
 			}
