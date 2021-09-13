@@ -8,28 +8,29 @@
 import SwiftUI
 
 struct RootCoordinatorView: View {
+	typealias Tab = RootCoordinator.RootTab
 	@ObservedObject var coordinator: RootCoordinator
 
     var body: some View {
 		TabView(selection: $coordinator.tab) {
 			Text("Турниры")
 				.tabItem {
-					Text(SelectedTab.events.rawValue)
+					Text(Tab.events.rawValue)
 					Image(systemName: "crown")
 				}
 				.tag(RootCoordinator.RootTab.events)
 			SearchCoordinatorView(coordinator: coordinator.searchCoordinator)
 				.tabItem {
-					Text(SelectedTab.search.rawValue)
+					Text(Tab.search.rawValue)
 					Image(systemName: "magnifyingglass")
 				}
 				.tag(RootCoordinator.RootTab.search)
 			Text("Профиль")
 				.tabItem {
-					Text(SelectedTab.profile.rawValue)
+					Text(Tab.profile.rawValue)
 					Image(systemName: "person")
 				}
-				.tag(RootCoordinator.RootTab.profile)
+				.tag(Tab.profile)
 		}
     }
 }

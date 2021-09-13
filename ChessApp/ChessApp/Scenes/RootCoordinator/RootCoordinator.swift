@@ -8,8 +8,10 @@
 import Combine
 
 final class RootCoordinator: ObservableObject {
-	enum RootTab {
-		case events, search, profile
+	enum RootTab: String {
+		case events = "Турниры"
+		case search = "Поиск"
+		case profile = "Профиль"
 	}
 
 	@Published var searchCoordinator: SearchCoordinator!
