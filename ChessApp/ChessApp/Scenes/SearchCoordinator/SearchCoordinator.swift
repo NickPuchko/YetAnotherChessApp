@@ -24,5 +24,9 @@ final class SearchCoordinator: ObservableObject {
 			searchCoordinator: self
 		)
 	}
+
+    func showTabBar(_ hidden: Bool) {
+        rootCoordinator.isTabBarHidden = hidden
+    }
 }
 

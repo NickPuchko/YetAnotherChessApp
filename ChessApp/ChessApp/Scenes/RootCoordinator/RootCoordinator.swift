@@ -16,9 +16,11 @@ final class RootCoordinator: ObservableObject {
 
 	@Published var searchCoordinator: SearchCoordinator!
 	@Published var tab: RootTab
+    @Published var isTabBarHidden: Bool
 
 	init(tab: RootTab) {
 		self.tab = tab
+        isTabBarHidden = false
 		searchCoordinator = .init(rootCoordinator: self)
 	}
 }

@@ -28,8 +28,12 @@
 		AA3FCF3F26EE3697001524EC /* NavigationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF3E26EE3696001524EC /* NavigationModifier.swift */; };
 		AA3FCF4126EE3722001524EC /* PopoverModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF4026EE3722001524EC /* PopoverModifier.swift */; };
 		AA3FCF4326EE3755001524EC /* SheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF4226EE3755001524EC /* SheetModifier.swift */; };
-		AA3FCF4726EE3FED001524EC /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF4626EE3FED001524EC /* AsyncImage.swift */; };
+		AA3FCF4726EE3FED001524EC /* CustomAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF4626EE3FED001524EC /* CustomAsyncImage.swift */; };
 		AA3FCF4926EE4D8D001524EC /* TabBarAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF4826EE4D8D001524EC /* TabBarAccessor.swift */; };
+		AA58D2F126EFED32008CD2F7 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = AA58D2F026EFED32008CD2F7 /* SwiftUIX */; };
+		AA58D2F426EFEDC2008CD2F7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = AA58D2F326EFEDC2008CD2F7 /* Introspect */; };
+		AA58D2F726EFFDAF008CD2F7 /* UINavigationBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA58D2F626EFFDAF008CD2F7 /* UINavigationBarAppearance.swift */; };
+		AA58D2FA26EFFE56008CD2F7 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = AA58D2F926EFFE56008CD2F7 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,8 +61,9 @@
 		AA3FCF3E26EE3696001524EC /* NavigationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModifier.swift; sourceTree = "<group>"; };
 		AA3FCF4026EE3722001524EC /* PopoverModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverModifier.swift; sourceTree = "<group>"; };
 		AA3FCF4226EE3755001524EC /* SheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModifier.swift; sourceTree = "<group>"; };
-		AA3FCF4626EE3FED001524EC /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		AA3FCF4626EE3FED001524EC /* CustomAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAsyncImage.swift; sourceTree = "<group>"; };
 		AA3FCF4826EE4D8D001524EC /* TabBarAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAccessor.swift; sourceTree = "<group>"; };
+		AA58D2F626EFFDAF008CD2F7 /* UINavigationBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarAppearance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BB7B7F8AA32CAC68B4215CF /* Pods_ChessApp.framework in Frameworks */,
+				AA58D2F426EFEDC2008CD2F7 /* Introspect in Frameworks */,
+				AA58D2F126EFED32008CD2F7 /* SwiftUIX in Frameworks */,
+				AA58D2FA26EFFE56008CD2F7 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +111,7 @@
 		AA3FCF0826ECE171001524EC /* ChessApp */ = {
 			isa = PBXGroup;
 			children = (
+				AA58D2F526EFFD89008CD2F7 /* Extensions */,
 				AA3FCF4526EE3C23001524EC /* Models */,
 				AA3FCF4426EE3C04001524EC /* Views */,
 				AA3FCF3D26EE3683001524EC /* ViewModifiers */,
@@ -185,7 +194,7 @@
 				AA3FCF2626ED46D9001524EC /* SearchBar.swift */,
 				AA3FCF2826ED5E04001524EC /* Filters.swift */,
 				AA3FCF1D26ED2C5A001524EC /* EventPreview.swift */,
-				AA3FCF4626EE3FED001524EC /* AsyncImage.swift */,
+				AA3FCF4626EE3FED001524EC /* CustomAsyncImage.swift */,
 				AA3FCF4826EE4D8D001524EC /* TabBarAccessor.swift */,
 			);
 			path = Views;
@@ -199,6 +208,14 @@
 				AA3FCF2426ED2E23001524EC /* EventState.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AA58D2F526EFFD89008CD2F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AA58D2F626EFFDAF008CD2F7 /* UINavigationBarAppearance.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FD2D0685CD50BA35541502AE /* Frameworks */ = {
@@ -226,6 +243,11 @@
 			dependencies = (
 			);
 			name = ChessApp;
+			packageProductDependencies = (
+				AA58D2F026EFED32008CD2F7 /* SwiftUIX */,
+				AA58D2F326EFEDC2008CD2F7 /* Introspect */,
+				AA58D2F926EFFE56008CD2F7 /* Then */,
+			);
 			productName = ChessApp;
 			productReference = AA3FCF0626ECE171001524EC /* ChessApp.app */;
 			productType = "com.apple.product-type.application";
@@ -254,6 +276,11 @@
 				Base,
 			);
 			mainGroup = AA3FCEFD26ECE171001524EC;
+			packageReferences = (
+				AA58D2EF26EFED32008CD2F7 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				AA58D2F226EFEDC2008CD2F7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				AA58D2F826EFFE56008CD2F7 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = AA3FCF0726ECE171001524EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -314,13 +341,14 @@
 				AA3FCF0A26ECE171001524EC /* ChessApp.swift in Sources */,
 				AA3FCF4126EE3722001524EC /* PopoverModifier.swift in Sources */,
 				AA3FCF3F26EE3697001524EC /* NavigationModifier.swift in Sources */,
+				AA58D2F726EFFDAF008CD2F7 /* UINavigationBarAppearance.swift in Sources */,
 				AA3FCF3C26EE332E001524EC /* SearchViewModel.swift in Sources */,
 				AA3FCF2926ED5E04001524EC /* Filters.swift in Sources */,
 				AA3FCF3326EE30A8001524EC /* SearchCoordinator.swift in Sources */,
 				AA3FCF1C26ED2C16001524EC /* SearchView.swift in Sources */,
 				AA3FCF2526ED2E23001524EC /* EventState.swift in Sources */,
 				AA3FCF3A26EE318E001524EC /* DetailedEventView.swift in Sources */,
-				AA3FCF4726EE3FED001524EC /* AsyncImage.swift in Sources */,
+				AA3FCF4726EE3FED001524EC /* CustomAsyncImage.swift in Sources */,
 				AA3FCF3526EE30B4001524EC /* SearchCoordinatorView.swift in Sources */,
 				AA3FCF2726ED46D9001524EC /* SearchBar.swift in Sources */,
 				AA3FCF3026EE2A8A001524EC /* RootCoordinator.swift in Sources */,
@@ -531,6 +559,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA58D2EF26EFED32008CD2F7 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.8;
+			};
+		};
+		AA58D2F226EFEDC2008CD2F7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.1.3;
+			};
+		};
+		AA58D2F826EFFE56008CD2F7 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = exactVersion;
+				version = 2.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA58D2F026EFED32008CD2F7 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA58D2EF26EFED32008CD2F7 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+		AA58D2F326EFEDC2008CD2F7 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA58D2F226EFEDC2008CD2F7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+		AA58D2F926EFFE56008CD2F7 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA58D2F826EFFE56008CD2F7 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA3FCEFE26ECE171001524EC /* Project object */;
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import SwiftUIX
 
 struct SearchView: View {
 	@ObservedObject var vm: SearchViewModel
@@ -17,7 +18,7 @@ struct SearchView: View {
 				SearchBar(text: $vm.searchString, isSearching: $vm.isSearching)
 					.padding()
 				Filters(startDate: $vm.startDate, endDate: $vm.endDate)
-					.padding()
+                    .padding([.leading, .trailing])
 			}
 			ScrollView {
 				LazyVStack(spacing: 0) {

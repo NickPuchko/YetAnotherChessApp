@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Introspect
 
 struct RootCoordinatorView: View {
 	typealias Tab = RootCoordinator.RootTab
@@ -32,11 +33,21 @@ struct RootCoordinatorView: View {
 				}
 				.tag(Tab.profile)
 		}
+        .introspectTabBarController { tabBarController in
+            _ = coordinator.$isTabBarHidden.sink { isHidden in
+                let frame = tabBarController.tabBar.frame
+                let factor: CGFloat = isHidden ? 1 : -1
+                let y = frame.origin.y + (frame.size.height * factor)
+                let newFrame = CGRect(
+                    x: frame.origin.x,
+                    y: y,
+                    width: frame.width,
+                    height: frame.height
+                )
+                UIView.animate(withDuration: 0.3, animations: {
+                    tabBarController.tabBar.frame = newFrame
+                })
+            }
+        }
     }
 }
-
-//struct RootCoordinatorView_Previews: PreviewProvider {
-//    static var previews: some View {
-//		RootCoordinatorView(coordinator: RootCoordinator())
-//    }
-//}
