@@ -8,6 +8,8 @@
 import SwiftUI
 
 enum RatingType: String, Codable, CaseIterable, Identifiable {
+	case fide, frc, without
+
 	var id: Int {
 		switch self {
 		case .fide: return 0
@@ -15,9 +17,7 @@ enum RatingType: String, Codable, CaseIterable, Identifiable {
 		case .without: return 2
 		}
 	}
-
-	case fide, frc, without
-
+	
 	var image: Image {
 		Image(self.rawValue, bundle: .main)
 	}
