@@ -53,7 +53,7 @@ struct EventPreview: View {
 		.frame(maxWidth: .infinity)
 		.background(
 			RoundedRectangle(cornerRadius: 16)
-				.fill(.white)
+                .foregroundColor(.red)
 				.shadow(color: .init(white: 0.8), radius: 5, x: 0, y: 5)
 		)
 		.padding()
