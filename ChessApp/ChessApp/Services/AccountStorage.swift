@@ -13,6 +13,8 @@ protocol AccountStoring {
 	func clear()
 }
 
+
+/// Storage must be rafactored using SQLite.swift
 final class AccountStorage: AccountStoring {
 	private let fileManager: FileManager = .default
 	private lazy var url: URL = {

@@ -11,22 +11,17 @@ import Introspect
 // TODO: something goes wrong here during layouting O_o
 struct SearchCoordinatorView: View {
 	@ObservedObject var coordinator: SearchCoordinator
-    var body: some View {
+	var body: some View {
 		NavigationView {
 			SearchView(vm: coordinator.searchViewModel)
 				.navigation(item: $coordinator.detailedEventViewModel) { vm in
-					DetailedEventView(vm: vm)
-                        .onAppear {
-                            coordinator.showTabBar(true)
-                        }
+					DetailedEventView(vm: vm) .onAppear {
+						coordinator.showTabBar(true)
+					}
 				}
-                .onAppear {
-                    coordinator.showTabBar(false)
-                }
+		}.introspectNavigationController { navigationController in
+			navigationController.navigationBar.standardAppearance = .withoutSeparator
+			navigationController.navigationBar.scrollEdgeAppearance = .withoutSeparator
 		}
-        .introspectNavigationController { navigationController in
-            navigationController.navigationBar.standardAppearance = .withoutSeparator
-            navigationController.navigationBar.scrollEdgeAppearance = .withoutSeparator
-        }
-    }
+	}
 }

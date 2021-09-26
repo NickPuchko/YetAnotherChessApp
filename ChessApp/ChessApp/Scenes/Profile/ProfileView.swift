@@ -12,50 +12,72 @@ struct ProfileView: View {
 	@ObservedObject var vm: ProfileViewModel
 	
 	var body: some View {
-		VStack(alignment: .center) {
-			HStack {
-				Spacer()
-				Button(systemImage: .squareAndPencil) {
-					vm.isEditing = true
+		ZStack {
+			VStack(alignment: .center) {
+				HStack {
+					Spacer()
+					Button(systemImage: .squareAndPencil) {
+						vm.isEditing = true
+					}
 				}
-			}
-			.padding()
-			Image(data: (vm.userState.imageData ?? UIImage.symbol(.personCircle).pngData()!))?
-				.resizable()
-				.frame(width: 80, height: 80, alignment: .center)
-			Text(vm.userState.twoLineFullname)
-				.font(.title)
-			Text((vm.userState.role ?? .player).description)
-				.foregroundColor(.gray)
-			Spacer()
-		}
-		.onAppear(perform: vm.restoreUserState)
-		.sheet(isPresented: $vm.isEditing) {
-			VStack {
-				ImagePicker(data: $vm.userState.imageData, encoding: .png)
-				Form {
-					Picker("Роль", selection: $vm.userState.role) {
-						ForEach(ChessRole.allCases, id: \.self) {
-							Text($0.description)
+				.padding()
+				Image(data: (vm.userState.imageData ?? UIImage.symbol(.personCircle).pngData()!))?
+					.resizable()
+					.frame(width: 80, height: 80, alignment: .center)
+					.clipShape(Circle())
+					.onTapGesture {
+						vm.isEditingPhoto.toggle()
+					}
+					.overlay {
+						HStack {
+							Spacer()
+							VStack {
+								Spacer()
+								Image(systemName: .pencilCircle).foregroundColor(.blue)
+							}
 						}
 					}
-					TextField("Фамилия", text: $vm.userState.surname)
-					TextField("Имя", text: $vm.userState.name)
-					TextField("FIDE ID", value: $vm.userState.fideID, formatter: NumberFormatter())
-					TextField("ФШР ID", value: $vm.userState.russianID, formatter: NumberFormatter())
-					Button("Сохранить") {
-						vm.isEditing = false
-					}
+				Text(vm.userState.name ?? "")
+					.font(.title)
+				Text(vm.userState.surname ?? "")
+					.font(.title)
+				Text((vm.userState.role ?? .player).description)
+					.foregroundColor(.gray)
+				ProfileRowView(
+					ratingType: .fide,
+					title: "FIDE",
+					ratings: $vm.userState.fideRatings,
+					id: $vm.userState.fideID
+				)
+				ProfileRowView(
+					ratingType: .russian,
+					title: "ФШР",
+					ratings: $vm.userState.russianRatings,
+					id: $vm.userState.russianID
+				)
+				Button(action: vm.signOut) {
+					Text("Выйти")
+						.fontWeight(.thin)
+						.foregroundColor(.red)
+						.padding()
 				}
 				Spacer()
 			}
+			.onAppear(perform: vm.restoreUserState)
+			.sheet(isPresented: $vm.isEditing) {
+				ProfileFormView(vm: vm)
+			}
+			.sheet(isPresented: $vm.isEditingPhoto, onDismiss: {
+				vm.saveUserState()
+			}) {
+				ImagePicker(data: $vm.userState.imageData, encoding: .png) {
+					vm.isEditingPhoto.toggle()
+				}
+			}
+			if vm.isLoading {
+				Blur(style: .prominent).ignoresSafeArea()
+				ProgressView()
+			}
 		}
-	}
-}
-
-public extension UIImage {
-	static func symbol(_ symbol: SFSymbolName) -> UIImage {
-		UIImage(systemName: symbol.rawValue)
-		?? UIImage(systemName: SFSymbolName.phone.rawValue)!
 	}
 }

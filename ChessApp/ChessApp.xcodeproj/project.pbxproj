@@ -29,7 +29,6 @@
 		AA3FCF4126EE3722001524EC /* PopoverModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF4026EE3722001524EC /* PopoverModifier.swift */; };
 		AA3FCF4326EE3755001524EC /* SheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF4226EE3755001524EC /* SheetModifier.swift */; };
 		AA3FCF4726EE3FED001524EC /* CustomAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF4626EE3FED001524EC /* CustomAsyncImage.swift */; };
-		AA3FCF4926EE4D8D001524EC /* TabBarAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCF4826EE4D8D001524EC /* TabBarAccessor.swift */; };
 		AA58D2F126EFED32008CD2F7 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = AA58D2F026EFED32008CD2F7 /* SwiftUIX */; };
 		AA58D2F426EFEDC2008CD2F7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = AA58D2F326EFEDC2008CD2F7 /* Introspect */; };
 		AA58D2F726EFFDAF008CD2F7 /* UINavigationBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA58D2F626EFFDAF008CD2F7 /* UINavigationBarAppearance.swift */; };
@@ -38,7 +37,11 @@
 		AA5FB7C926F61BA000D33CB1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FB7C826F61BA000D33CB1 /* ProfileView.swift */; };
 		AA5FB7CE26F6382900D33CB1 /* AccountStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FB7CD26F6382900D33CB1 /* AccountStorage.swift */; };
 		AA5FB7D026F63DCD00D33CB1 /* Primitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FB7CF26F63DCD00D33CB1 /* Primitives.swift */; };
-		AA5FB7D226F64A5A00D33CB1 /* View + isHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FB7D126F64A5A00D33CB1 /* View + isHidden.swift */; };
+		AA85899D26FFE57B00C528D0 /* Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA85899C26FFE57B00C528D0 /* Literals.swift */; };
+		AA85899F26FFF87C00C528D0 /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA85899E26FFF87C00C528D0 /* SFImage.swift */; };
+		AAC6DB1926FFC89C00C6396A /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6DB1826FFC89C00C6396A /* Blur.swift */; };
+		AAC6DB1B26FFD21E00C6396A /* ProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6DB1A26FFD21E00C6396A /* ProfileFormView.swift */; };
+		AAC6DB1D26FFD44F00C6396A /* ProfileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6DB1C26FFD44F00C6396A /* ProfileRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,13 +70,17 @@
 		AA3FCF4026EE3722001524EC /* PopoverModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverModifier.swift; sourceTree = "<group>"; };
 		AA3FCF4226EE3755001524EC /* SheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModifier.swift; sourceTree = "<group>"; };
 		AA3FCF4626EE3FED001524EC /* CustomAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAsyncImage.swift; sourceTree = "<group>"; };
-		AA3FCF4826EE4D8D001524EC /* TabBarAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAccessor.swift; sourceTree = "<group>"; };
 		AA58D2F626EFFDAF008CD2F7 /* UINavigationBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarAppearance.swift; sourceTree = "<group>"; };
 		AA5FB7C626F61B7800D33CB1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		AA5FB7C826F61BA000D33CB1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AA5FB7CD26F6382900D33CB1 /* AccountStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorage.swift; sourceTree = "<group>"; };
 		AA5FB7CF26F63DCD00D33CB1 /* Primitives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primitives.swift; sourceTree = "<group>"; };
-		AA5FB7D126F64A5A00D33CB1 /* View + isHidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + isHidden.swift"; sourceTree = "<group>"; };
+		AA85899C26FFE57B00C528D0 /* Literals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literals.swift; sourceTree = "<group>"; };
+		AA85899E26FFF87C00C528D0 /* SFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFImage.swift; sourceTree = "<group>"; };
+		AAC6DB1726FF822B00C6396A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AAC6DB1826FFC89C00C6396A /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
+		AAC6DB1A26FFD21E00C6396A /* ProfileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFormView.swift; sourceTree = "<group>"; };
+		AAC6DB1C26FFD44F00C6396A /* ProfileRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +128,7 @@
 		AA3FCF0826ECE171001524EC /* ChessApp */ = {
 			isa = PBXGroup;
 			children = (
+				AAC6DB1726FF822B00C6396A /* Info.plist */,
 				AA5FB7CA26F637EA00D33CB1 /* Services */,
 				AA58D2F526EFFD89008CD2F7 /* Extensions */,
 				AA3FCF4526EE3C23001524EC /* Models */,
@@ -207,7 +215,7 @@
 				AA3FCF2826ED5E04001524EC /* Filters.swift */,
 				AA3FCF1D26ED2C5A001524EC /* EventPreview.swift */,
 				AA3FCF4626EE3FED001524EC /* CustomAsyncImage.swift */,
-				AA3FCF4826EE4D8D001524EC /* TabBarAccessor.swift */,
+				AAC6DB1826FFC89C00C6396A /* Blur.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,7 +235,8 @@
 			children = (
 				AA58D2F626EFFDAF008CD2F7 /* UINavigationBarAppearance.swift */,
 				AA5FB7CF26F63DCD00D33CB1 /* Primitives.swift */,
-				AA5FB7D126F64A5A00D33CB1 /* View + isHidden.swift */,
+				AA85899C26FFE57B00C528D0 /* Literals.swift */,
+				AA85899E26FFF87C00C528D0 /* SFImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -237,6 +246,8 @@
 			children = (
 				AA5FB7C626F61B7800D33CB1 /* ProfileViewModel.swift */,
 				AA5FB7C826F61BA000D33CB1 /* ProfileView.swift */,
+				AAC6DB1A26FFD21E00C6396A /* ProfileFormView.swift */,
+				AAC6DB1C26FFD44F00C6396A /* ProfileRowView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -363,31 +374,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA3FCF4926EE4D8D001524EC /* TabBarAccessor.swift in Sources */,
 				AA3FCF2226ED2DE5001524EC /* GameMode.swift in Sources */,
 				AA3FCF3826EE3158001524EC /* DetailedEventViewModel.swift in Sources */,
 				AA3FCF1E26ED2C5A001524EC /* EventPreview.swift in Sources */,
 				AA3FCF2E26EE29F6001524EC /* RootCoordinatorView.swift in Sources */,
+				AAC6DB1B26FFD21E00C6396A /* ProfileFormView.swift in Sources */,
 				AA3FCF4326EE3755001524EC /* SheetModifier.swift in Sources */,
 				AA3FCF0A26ECE171001524EC /* ChessApp.swift in Sources */,
+				AAC6DB1926FFC89C00C6396A /* Blur.swift in Sources */,
 				AA3FCF4126EE3722001524EC /* PopoverModifier.swift in Sources */,
 				AA3FCF3F26EE3697001524EC /* NavigationModifier.swift in Sources */,
 				AA5FB7CE26F6382900D33CB1 /* AccountStorage.swift in Sources */,
+				AAC6DB1D26FFD44F00C6396A /* ProfileRowView.swift in Sources */,
 				AA58D2F726EFFDAF008CD2F7 /* UINavigationBarAppearance.swift in Sources */,
 				AA3FCF3C26EE332E001524EC /* SearchViewModel.swift in Sources */,
 				AA5FB7D026F63DCD00D33CB1 /* Primitives.swift in Sources */,
 				AA3FCF2926ED5E04001524EC /* Filters.swift in Sources */,
 				AA3FCF3326EE30A8001524EC /* SearchCoordinator.swift in Sources */,
 				AA3FCF1C26ED2C16001524EC /* SearchView.swift in Sources */,
+				AA85899F26FFF87C00C528D0 /* SFImage.swift in Sources */,
 				AA3FCF2526ED2E23001524EC /* EventState.swift in Sources */,
 				AA3FCF3A26EE318E001524EC /* DetailedEventView.swift in Sources */,
 				AA3FCF4726EE3FED001524EC /* CustomAsyncImage.swift in Sources */,
 				AA5FB7C926F61BA000D33CB1 /* ProfileView.swift in Sources */,
 				AA3FCF3526EE30B4001524EC /* SearchCoordinatorView.swift in Sources */,
-				AA5FB7D226F64A5A00D33CB1 /* View + isHidden.swift in Sources */,
 				AA3FCF2726ED46D9001524EC /* SearchBar.swift in Sources */,
 				AA5FB7C726F61B7800D33CB1 /* ProfileViewModel.swift in Sources */,
 				AA3FCF3026EE2A8A001524EC /* RootCoordinator.swift in Sources */,
+				AA85899D26FFE57B00C528D0 /* Literals.swift in Sources */,
 				AA3FCF2026ED2DD3001524EC /* RatingType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +537,7 @@
 				DEVELOPMENT_TEAM = LZ34WQHSPQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChessApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -554,6 +569,7 @@
 				DEVELOPMENT_TEAM = LZ34WQHSPQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChessApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

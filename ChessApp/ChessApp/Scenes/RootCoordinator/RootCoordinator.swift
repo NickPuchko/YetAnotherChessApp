@@ -17,7 +17,6 @@ final class RootCoordinator: ObservableObject {
 	@Published var searchCoordinator: SearchCoordinator!
 	@Published var tab: RootTab
 	@Published var isTabBarHidden: Bool = false
-	@Published var isLoading: Bool = false
 
 	init(tab: RootTab) {
 		self.tab = tab

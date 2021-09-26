@@ -6,8 +6,6 @@
 //
 import Foundation
 
-typealias Action = () -> ()
-
 func onMainThread(_ block: @escaping () -> Void) {
 	if Thread.isMainThread {
 		block()

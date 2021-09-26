@@ -44,7 +44,7 @@ struct SearchView: View {
 					}
 					ToolbarItem(placement: .navigationBarLeading) {
 						Button {
-							//
+							// TODO: favourites or something else
 						} label: {
 							Config.pupa.resizable()
 						}
