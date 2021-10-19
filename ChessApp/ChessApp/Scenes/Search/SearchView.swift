@@ -52,6 +52,48 @@ struct SearchView: View {
 				}
 			}
 		}
+		.popover(isPresented: $vm.isFormPresented) {
+			Form {
+				Section {
+					TextField("Название турнира", text: $vm.title)
+					TextField("Местоположение", text: $vm.location)
+					DatePicker("Дата открытия", selection: $vm.openDate)
+					DatePicker("Дата закрытия", selection: $vm.closeDate)
+				}
+				Section {
+					TextField("Минимальный рейтинг", value: $vm.minRating, formatter: NumberFormatter())
+					TextField("Максимальный рейтинг", value: $vm.maxRating, formatter: NumberFormatter())
+					DatePicker("Дата закрытия заявок", selection: $vm.deadlineDate)
+						.datePickerStyle(GraphicalDatePickerStyle())
+				}
+				Button("Создать") {
+					vm.createEvent { succeeded in
+						vm.isFormPresented = false
+					}
+				}
+				.disabled(!(vm.title != "" && vm.location != ""))
+			}
+		}
+		.overlay {
+			VStack {
+				Spacer()
+				HStack {
+					Button(systemImage: .trashCircle) {
+						vm.clearData()
+					}
+					.font(.system(size: 40))
+					.frame(width: 40, height: 40, alignment: .center)
+					Spacer()
+					Button(systemImage: .plusCircle) {
+						vm.isFormPresented.toggle()
+					}
+					.font(.system(size: 40))
+					.frame(width: 40, height: 40, alignment: .center)
+				}
+			}
+			.padding()
+		}
+
 	}
 }
 

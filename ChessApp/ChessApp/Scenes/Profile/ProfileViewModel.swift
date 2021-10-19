@@ -50,7 +50,7 @@ final class ProfileViewModel: ObservableObject {
 	}
 
 	func signOut() {
-		storage.clear()
+		//
 	}
 }
 
@@ -58,12 +58,12 @@ struct User: Identifiable, Codable {
 	let id: String
 	var name: String?
 	var surname: String?
-	var role: ChessRole?
 	var fideRatings: Ratings?
 	var russianRatings: Ratings?
 	var fideID: Int?
 	var russianID: Int?
 	var imageData: Data?
+	var role: ChessRole = .player
 }
 
 extension User {
@@ -78,14 +78,16 @@ struct Ratings: Codable {
 
 
 
-enum ChessRole: CustomStringConvertible, CaseIterable, Codable {
-	var description: String {
-		switch self {
-		case .admin: return "Игрок"
-		case .player: return "Организатор"
-		}
-	}
+enum ChessRole: String, CaseIterable, Identifiable, Codable {
+//	var description: String {
+//		switch self {
+//		case .admin: return "Игрок"
+//		case .player: return "Организатор"
+//		}
+//	}
 
-	case player
-	case admin
+	case player = "Игрок"
+	case admin = "Организатор"
+
+	var id: String { rawValue }
 }

@@ -1,18 +1,16 @@
 //
-//  AccountStorage.swift
+//  UserStorage.swift
 //  ChessApp
 //
-//  Created by Nikolai Puchko on 18.09.2021.
+//  Created by Nikolai Puchko on 19.10.2021.
 //
 
 import Foundation
 
 protocol AccountStoring {
-	func store(account: User, completion: @escaping (Bool) -> ())
-	func restore(completion: @escaping (User?) -> ())
-	func clear()
+	func store(account: User, completion: @escaping (Bool) -> Void)
+	func restore(completion: @escaping (User?) -> Void)
 }
-
 
 /// Storage must be rafactored using SQLite.swift
 final class AccountStorage: AccountStoring {

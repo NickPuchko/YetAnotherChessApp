@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Then
 
 extension UINavigationBarAppearance {
     static let withoutSeparator = UINavigationBarAppearance().then { appearance in

@@ -44,7 +44,7 @@ struct EventPreview: View {
 					Config.timeImage
 						.resizable()
 						.frame(width: 20, height: 20, alignment: .center)
-					Text(eventState.mode.rawValue)
+					Text(eventState.mode.description)
 				}
 			}
 			.padding(.leading, 40)
@@ -72,7 +72,7 @@ struct EventPreview_Previews: PreviewProvider {
 				startDate: Date(timeIntervalSinceNow: 100_000),
 				endDate: Date(timeIntervalSinceNow: 200_000),
 				ratingType: .fide,
-				mode: .classic
+				mode: .init(.init(minutes: 30, seconds: 0, increment: 15))
 			)
 		)
     }

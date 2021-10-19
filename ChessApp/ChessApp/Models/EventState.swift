@@ -24,6 +24,6 @@ struct EventState: Identifiable {
 		|| title.lowercased().contains(lowercasedSearch)
 		|| location.lowercased().contains(lowercasedSearch)
 		|| ratingType.description.lowercased().contains(lowercasedSearch)
-		|| mode.rawValue.lowercased().contains(lowercasedSearch)
+		|| mode.description.lowercased().contains(lowercasedSearch)
 	}
 }

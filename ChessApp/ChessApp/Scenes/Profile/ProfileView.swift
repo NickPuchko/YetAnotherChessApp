@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftUIX
 
 struct ProfileView: View {
+	private let imageSize: Double = 120.0
 	@ObservedObject var vm: ProfileViewModel
 	
 	var body: some View {
@@ -23,7 +24,7 @@ struct ProfileView: View {
 				.padding()
 				Image(data: (vm.userState.imageData ?? UIImage.symbol(.personCircle).pngData()!))?
 					.resizable()
-					.frame(width: 80, height: 80, alignment: .center)
+					.frame(width: imageSize, height: imageSize, alignment: .center)
 					.clipShape(Circle())
 					.onTapGesture {
 						vm.isEditingPhoto.toggle()
@@ -41,8 +42,9 @@ struct ProfileView: View {
 					.font(.title)
 				Text(vm.userState.surname ?? "")
 					.font(.title)
-				Text((vm.userState.role ?? .player).description)
+				Text(vm.userState.role.rawValue)
 					.foregroundColor(.gray)
+					.padding(.bottom)
 				ProfileRowView(
 					ratingType: .fide,
 					title: "FIDE",
@@ -75,7 +77,7 @@ struct ProfileView: View {
 				}
 			}
 			if vm.isLoading {
-				Blur(style: .prominent).ignoresSafeArea()
+				Blur(style: .light).ignoresSafeArea()
 				ProgressView()
 			}
 		}
