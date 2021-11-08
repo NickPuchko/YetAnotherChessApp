@@ -1,6 +1,6 @@
 //
-//  AsyncImage.swift
-//  AsyncImage
+//  CustomAsyncImage.swift
+//  CustomAsyncImage
 //
 //  Created by Nikolai Puchko on 12.09.2021.
 //
@@ -8,7 +8,7 @@
 import Combine
 import SwiftUI
 
-struct AsyncImage<V: View>: View {
+struct CustomAsyncImage<V: View>: View {
 	let `default`: V
 	let url: URL?
 
@@ -43,7 +43,7 @@ struct AsyncImage<V: View>: View {
 				.eraseToAnyPublisher()
 		}
 		return URLSession.shared.dataTaskPublisher(for: url)
-			.compactMap { UIImage(data: $0.data).map(Image.init) }
+            .compactMap { UIImage(data: $0.data).map { Image(uiImage: $0) } }
 			.catch { _ in Empty() }
 			.eraseToAnyPublisher()
 	}
@@ -69,7 +69,7 @@ struct AsyncImage<V: View>: View {
 
 }
 
-extension AsyncImage where V == Color {
+extension CustomAsyncImage where V == Color {
 	init(url: URL?) {
 		self.init(default: .gray, url: url)
 	}

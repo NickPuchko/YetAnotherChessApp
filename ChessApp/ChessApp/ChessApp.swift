@@ -11,8 +11,9 @@ import SwiftUI
 struct ChessApp: App {
 	@StateObject private var coordinator = RootCoordinator(tab: .search)
     var body: some Scene {
-        WindowGroup {
-            RootCoordinatorView(coordinator: coordinator)
-        }
+			WindowGroup {
+				RootCoordinatorView(coordinator: coordinator)
+					.environment(\.colorScheme, .light) // TODO: replace with a real light theme support
+			}
     }
 }
